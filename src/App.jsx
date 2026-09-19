@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import TaskList from './components/TaskList';
+import NoteList from './components/NoteList';
 import './App.css';
 
 function App() {
@@ -29,12 +30,7 @@ function App() {
 
         {activeTab === 'Tasks' && <TaskList />}
 
-        {activeTab === 'Notes' && (
-          <div className="placeholder-card">
-            <h2>Notes Workspace</h2>
-            <p>Your personal notes and code snippets will be available here soon.</p>
-          </div>
-        )}
+        {activeTab === 'Notes' && <NoteList />}
 
         {activeTab === 'Settings' && (
           <div className="placeholder-card">
